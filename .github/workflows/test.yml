@@ -34,5 +34,5 @@ jobs:
         run: |
           bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
             -l Ruby \
-            --force-coverage-parser cobertura \
-            -r coverage/coverage.xml
+            --force-coverage-parser lcov \
+            -r coverage/lcov.info
