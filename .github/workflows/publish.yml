@@ -1,31 +1,25 @@
-name: CI
+name: Ruby Gem
 
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
   pull_request:
-    branches: [main]
+    branches: [ "main" ]
 
 jobs:
-  test:
-    name: Ruby ${{ matrix.ruby }}
+  build:
+    name: Build + Publish
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby: ["3.2", "3.3", "3.4"]
+    permissions:
+      contents: read
+      packages: write
 
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
-
-      - name: Run tests
-        run: bundle exec ruby -Itest -e 'Dir["test/test_*.rb"].each { require File.expand_path(_1) }'
+    - uses: actions/checkout@v4
+    - name: Set up Ruby 3.4.9
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.4.9
 
     - name: Publish to GPR
       run: |
