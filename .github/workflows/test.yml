@@ -26,3 +26,13 @@ jobs:
 
       - name: Run tests
         run: bundle exec ruby -Itest -e 'Dir["test/test_*.rb"].each { require File.expand_path(_1) }'
+
+      - name: Upload coverage to Codacy
+        if: matrix.ruby == '3.4'
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        run: |
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
+            -l Ruby \
+            --force-coverage-parser cobertura \
+            -r coverage/coverage.xml
