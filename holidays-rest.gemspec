@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   # Zero runtime dependencies — uses only Ruby stdlib (net/http, json, uri)
 
-  spec.add_development_dependency "minitest",             "~> 5"
+  spec.add_development_dependency "minitest",             "~> 6"
   spec.add_development_dependency "webmock",              "~> 3"
   spec.add_development_dependency "simplecov",      "~> 0.22"
   spec.add_development_dependency "simplecov-lcov", "~> 0.8"

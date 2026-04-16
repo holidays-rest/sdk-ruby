@@ -13,8 +13,12 @@ GEM
       bigdecimal
       rexml
     docile (1.4.1)
+    drb (2.2.3)
     hashdiff (1.2.1)
-    minitest (5.27.0)
+    minitest (6.0.4)
+      drb (~> 2.0)
+      prism (~> 1.5)
+    prism (1.9.0)
     public_suffix (7.0.5)
     rexml (3.4.4)
     simplecov (0.22.0)
@@ -35,7 +39,7 @@ PLATFORMS
 
 DEPENDENCIES
   holidays-rest!
-  minitest (~> 5)
+  minitest (~> 6)
   simplecov (~> 0.22)
   simplecov-lcov (~> 0.8)
   webmock (~> 3)
@@ -45,9 +49,11 @@ CHECKSUMS
   bigdecimal (4.1.1) sha256=1c09efab961da45203c8316b0cdaec0ff391dfadb952dd459584b63ebf8054ca
   crack (1.0.1) sha256=ff4a10390cd31d66440b7524eb1841874db86201d5b70032028553130b6d4c7e
   docile (1.4.1) sha256=96159be799bfa73cdb721b840e9802126e4e03dfc26863db73647204c727f21e
+  drb (2.2.3) sha256=0b00d6fdb50995fe4a45dea13663493c841112e4068656854646f418fda13373
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
   holidays-rest (1.3.0)
-  minitest (5.27.0) sha256=2d3b17f8a36fe7801c1adcffdbc38233b938eb0b4966e97a6739055a45fa77d5
+  minitest (6.0.4) sha256=df1304664589d40f46089247fdc451f866b0ce0d7cae1457a15fc1eb7d48dca1
+  prism (1.9.0) sha256=7b530c6a9f92c24300014919c9dcbc055bf4cdf51ec30aed099b06cd6674ef85
   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
   simplecov (0.22.0) sha256=fe2622c7834ff23b98066bb0a854284b2729a569ac659f82621fc22ef36213a5
