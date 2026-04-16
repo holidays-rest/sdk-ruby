@@ -1,7 +1,5 @@
 # holidays.rest Ruby SDK
 
-[![Test](https://github.com/holidays-rest/sdk-ruby/actions/workflows/test.yml/badge.svg)](https://github.com/holidays-rest/sdk-ruby/actions/workflows/test.yml)
-[![Publish](https://github.com/holidays-rest/sdk-ruby/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/holidays-rest/sdk-ruby/actions/workflows/publish.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/bce07ed633394f069b4c2c6d87057d32)](https://app.codacy.com/gh/holidays-rest/sdk-ruby/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/bce07ed633394f069b4c2c6d87057d32)](https://app.codacy.com/gh/holidays-rest/sdk-ruby/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 
