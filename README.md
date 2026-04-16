@@ -1,5 +1,7 @@
 # holidays.rest Ruby SDK
 
+[![Ruby Gem](https://github.com/holidays-rest/sdk-ruby/actions/workflows/publish.yml/badge.svg)](https://github.com/holidays-rest/sdk-ruby/actions/workflows/publish.yml)
+
 Official Ruby SDK for the [holidays.rest](https://www.holidays.rest) API.
 
 ## Requirements
