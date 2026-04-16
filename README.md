@@ -1,6 +1,6 @@
 # holidays.rest Ruby SDK
 
-Official Ruby SDK for the [holidays.rest](https://holidays.rest) API.
+Official Ruby SDK for the [holidays.rest](https://www.holidays.rest) API.
 
 ## Requirements
 
@@ -117,10 +117,26 @@ client.languages.each { |l| puts "#{l.code} — #{l.name}" }
 All responses are deserialized into immutable `Data` objects.
 
 ```ruby
-Holiday    # .name, .date, .type, .country, .region, .religion, .language
-Country    # .name, .alpha2, .subdivisions → Array<Subdivision>
-Subdivision # .code, .name
-Language   # .code, .name
+Holiday
+  .country_code   # String   — ISO 3166 alpha-2, e.g. "DE"
+  .country_name   # String   — e.g. "Germany"
+  .date           # String   — ISO 8601, e.g. "2026-01-01"
+  .name           # Hash     — language code => name, e.g. { "en" => "New Year's Day" }
+  .is_national    # Boolean
+  .is_religious   # Boolean
+  .is_local       # Boolean
+  .is_estimate    # Boolean
+  .day            # HolidayDay
+  .religion       # String   — e.g. "Christianity", or "" if not applicable
+  .regions        # Array<String> — subdivision codes, e.g. ["BW", "BY"]
+
+HolidayDay
+  .actual         # String   — day of week the holiday actually falls on
+  .observed       # String   — day of week the holiday is observed
+
+Country         # .name, .alpha2, .subdivisions → Array<Subdivision>
+Subdivision     # .code, .name
+Language        # .code, .name
 ```
 
 ---
